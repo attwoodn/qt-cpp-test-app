@@ -1,8 +1,14 @@
+# attach to vcpkg's cmake configuration for project dependencies
+set(CMAKE_TOOLCHAIN_FILE ../vcpkg/scripts/buildsystems/vcpkg.cmake)
+
 cmake_minimum_required(VERSION 3.10)
 project(expression_tree 
     DESCRIPTION "A basic Qt application with C++"
     VERSION 1.0.0
     LANGUAGES CXX)
+
+# Generate compile_commands.json for LLVM tooling
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "")
 
 if (NOT DEFINED CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 20)
@@ -12,9 +18,9 @@ if (NOT CMAKE_BUILD_TYPE OR CMAKE_BUILD_TYPE STREQUAL "")
     set(CMAKE_BUILD_TYPE "Release" CACHE STRING "" FORCE)
 endif()
 
-# Generate compile_commands.json for LLVM tooling
-option(CMAKE_EXPORT_COMPILE_COMMANDS "Generates compile_commands.json when enabled")
-mark_as_advanced(CLEAR CMAKE_EXPORT_COMPILE_COMMANDS)
+find_package(Qt5Core REQUIRED)
+find_package(Qt5Gui REQUIRED)
+find_package(Qt5Widgets REQUIRED)
 
 #include_directories( include )
-#add_subdirectory( tests )
+add_subdirectory( src )

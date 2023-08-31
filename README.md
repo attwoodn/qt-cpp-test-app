@@ -10,13 +10,19 @@ To install the project dependencies, please run the following commands in the pr
 # initialize the vcpkg submodule
 git submodule update --init
 
-# install sub-dependencies
-sudo apt install -y curl pkg-config pip python3-distutils libxi-dev libgl1-mesa-dev libglu1-mesa-dev mesa-common-dev libxrandr-dev libxxf86vm-dev flex bison nasm autoconf automake autopoint libtool autoconf-archive
+# install vcpkg dependencies
+sudo apt install -y curl pkg-config
+
+# install qt5 dependencies
+sudo apt install -y '^libxcb.*-dev' libx11-xcb-dev libgl1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
 
 # build vcpkg without information collection
 ./vcpkg/bootstrap-vcpkg.sh -disableMetrics
-./vcpkg/vcpkg install qt
 
+# install qt5
+./vcpkg/vcpkg install qt5-base
+
+# build the Qt Test App
 mkdir build && cd build
 cmake ..
 make
