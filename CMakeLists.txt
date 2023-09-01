@@ -18,6 +18,12 @@ if (NOT CMAKE_BUILD_TYPE OR CMAKE_BUILD_TYPE STREQUAL "")
     set(CMAKE_BUILD_TYPE "Release" CACHE STRING "" FORCE)
 endif()
 
+OPTION( COMMON_BIN_DIRECTORY "Puts all libs and binaries in bin/" ON )
+IF( COMMON_BIN_DIRECTORY )
+  set (LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+  set (EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+ENDIF()
+
 find_package(Qt5Core REQUIRED)
 find_package(Qt5Gui REQUIRED)
 find_package(Qt5Widgets REQUIRED)
