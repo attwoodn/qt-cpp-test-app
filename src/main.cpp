@@ -1,14 +1,12 @@
 #include <iostream>
 #include <QApplication>
-#include <QMainWindow>
+#include "main_window.hpp"
 
 int main(int argc, char** argv ) {
     QApplication qapp(argc, argv);
 
-    QMainWindow main_window;
-    main_window.setWindowTitle(QString("Qt Test App"));
-    main_window.setMinimumSize(200, 200);
-    main_window.show();
+    main_window window;
+    window.show();
 
     return qapp.exec();
 }

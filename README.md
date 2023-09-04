@@ -26,4 +26,7 @@ sudo apt install -y '^libxcb.*-dev' libx11-xcb-dev libgl1-mesa-dev libxrender-de
 mkdir build && cd build
 cmake ..
 make
+
+# run the Qt Test App
+./bin/main
 ```
