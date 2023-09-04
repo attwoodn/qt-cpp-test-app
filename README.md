@@ -2,7 +2,7 @@
 
 A basic Qt app made using C++.
 
-# Installing dependencies
+## Installing Dependencies
 
 To install the project dependencies, please run the following commands in the project root directory:
 
@@ -21,7 +21,13 @@ sudo apt install -y '^libxcb.*-dev' libx11-xcb-dev libgl1-mesa-dev libxrender-de
 
 # install qt5
 ./vcpkg/vcpkg install qt5-base
+```
 
+## Building and Running the App
+
+Once the project dependencies have been installed, the app can be built and run by executing the following commands from the project root directory:
+
+```
 # build the Qt Test App
 mkdir build && cd build
 cmake ..
