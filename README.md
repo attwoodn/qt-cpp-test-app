@@ -36,3 +36,14 @@ make
 # run the Qt Test App
 ./bin/main
 ```
+
+## Using the App
+
+Fill in your first and last name, and select your favorite fruit from the drop-down menu (apples, bananas, oranges). When the given user input is determined to be valid, the `Say Hello` button becomes enabled. Pressing the `Say Hello` button outputs a message to the text box below.
+
+<p align="center">
+    <img src="docs/before.png"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="docs/after.png"/>
+</p>
