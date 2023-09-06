@@ -2,7 +2,7 @@
 set(CMAKE_TOOLCHAIN_FILE ../vcpkg/scripts/buildsystems/vcpkg.cmake)
 
 cmake_minimum_required(VERSION 3.10)
-project(expression_tree 
+project(qt_test_app 
     DESCRIPTION "A basic Qt application with C++"
     VERSION 1.0.0
     LANGUAGES CXX)
