@@ -11,7 +11,7 @@ To install the project dependencies, please run the following commands in the pr
 git submodule update --init
 
 # install vcpkg dependencies
-sudo apt install -y curl pkg-config
+sudo apt install -y curl pkg-config python3-distutils
 
 # install qt5 dependencies
 sudo apt install -y '^libxcb.*-dev' libx11-xcb-dev libgl1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
