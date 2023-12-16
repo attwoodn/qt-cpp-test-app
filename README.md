@@ -1,6 +1,11 @@
 # Qt C++ Test App
 
-A basic Qt app made using C++.
+A simple desktop application made using C++ and Qt5. 
+
+For this project, my goal was to learn: 
+ * using vcpkg for installing C++ library dependencies;
+ * creating UI elements in QtCreator and using them in C++ code; and
+ * integrating Qt project files into CMake builds.
 
 ## Installing Dependencies
 
